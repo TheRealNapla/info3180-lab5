@@ -7,5 +7,5 @@ from flask_wtf.file import FileField, FileRequired, FileAllowed
 class MovieForm(FlaskForm):
     title = StringField('Title', validators= [DataRequired()])
     description = TextAreaField('Description', validators=[DataRequired()])
-    poster = FileField('Poster', validators=[FileRequired(), FileAllowed(['jpg', 'png'])])
+    poster = FileField('Poster', validators=[FileRequired(), FileAllowed(['jpg', 'jpeg', 'png'])])
     submit = SubmitField('Add Movie Poster')
